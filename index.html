@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Quiz de One Piece</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main>
+  <section id="inicio" class="tarjeta cartel">
+    <h1>Quiz de One Piece</h1>
+    <p>Pon a prueba tu conocimiento sobre los Sombrero de Paja y el mundo de la piratería.</p>
+    <ul class="detalles">
+      <li><span id="total-preguntas">10</span> preguntas de opción múltiple</li>
+      <li>1 minuto por pregunta</li>
+      <li>Acierto: +1 punto. Tiempo agotado: −1 punto</li>
+    </ul>
+    <button class="principal" id="btn-empezar">Empezar</button>
+  </section>
+
+  <section id="quiz" class="tarjeta" hidden>
+    <div class="cabecera">
+      <span id="progreso">Pregunta 1 de 10</span>
+      <span id="puntos">Puntos: 0</span>
+      <span id="reloj" role="timer" aria-label="Tiempo restante">60 s</span>
+    </div>
+    <h2 id="pregunta" tabindex="-1"></h2>
+    <div id="opciones" class="opciones"></div>
+    <p id="mensaje" class="mensaje" aria-live="polite"></p>
+    <button class="principal" id="btn-siguiente" hidden>Siguiente</button>
+  </section>
+
+  <section id="final" class="tarjeta" hidden>
+    <h1>¡Fin del viaje!</h1>
+    <p class="nota-final" id="nota-final"></p>
+    <ol id="resultados" class="resultados"></ol>
+    <button class="principal" id="btn-reiniciar">Jugar otra vez</button>
+  </section>
+</main>
+<script src="preguntas.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
